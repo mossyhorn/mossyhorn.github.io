@@ -1,0 +1,64 @@
+body {
+    background-color: #87CEEB; /* Default background color */
+    transition: background-color 1s ease-out; /* Adjust the duration and timing function as needed */
+}
+
+body.background-flash {
+    background-color: #FF0000 !important; /* Change to red */
+}
+
+
+.game-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #87CEEB; /* Sky Blue color, you can change it */
+}
+
+.basket {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px; /* Adjust the size as needed */
+    height: 150px;
+    background: url('assets/basket.png') no-repeat center center/contain;
+}
+
+.gold {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px; /* Adjust the size as needed */
+    height: 30px;
+    background: url('assets/gold.jpg') no-repeat center center/contain;
+}
+
+/* Apply the transition to the body when gold is caught */
+/* CSS Transition for Gold Collection Effect */
+.gold.collected {
+    transform: scale(1.2); /* Scale up the gold */
+    transition: transform 0.5s ease-out; /* Adjust the duration and timing function as needed */
+}
+
+.bomb {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px; /* Adjust the size as needed */
+    height: 30px;
+    background: url('assets/bomb.jpg') no-repeat center center/contain;
+}
+
+.explosion {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px; /* Adjust the size as needed */
+    height: 300px;
+    background: url('assets/explosion.jpg') no-repeat center center/contain;
+    display: none; /* Initially hide the explosion */
+}
